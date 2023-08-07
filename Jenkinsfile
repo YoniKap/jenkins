@@ -27,9 +27,9 @@ pipeline{
         stage("deploy"){
             steps{
                 echo 'deploying the app'
-                withCredentials([
-                    usernamePassword(credentials: 'sserver-credentials', usernameVariable: 'USER', passwordVariable: 'PASSWORD')
-                ]) 
+               
+                echo "Username: $USER"
+                echo "Password: $PASSWORD"
             }
         }
     }
